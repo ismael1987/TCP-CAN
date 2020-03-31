@@ -2,6 +2,11 @@ import socket
 import struct
 import sys
 
+
+#sudo ip link add dev vcan0 type vcan  // this each time we want to use the app
+#sudo ip link set up vcan0                     // this each time we want to use the app
+#to run it "cangen vcan0 -v"                 // when we want to run the simulation
+
 # CAN frame packing/unpacking (see `struct can_frame` in <linux/can.h>)
 can_frame_fmt = "=IB3x8s"
 
